@@ -26,6 +26,18 @@ namespace WinFrom
         {
             // 弹窗事件
             MessageBox.Show("窗口测试");
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("这是容器内的按钮");
+
         }
     }
 }
