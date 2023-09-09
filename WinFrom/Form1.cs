@@ -27,6 +27,8 @@ namespace WinFrom
             // 弹窗事件
             MessageBox.Show("窗口测试");
 
+            
+
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -38,6 +40,16 @@ namespace WinFrom
         {
             MessageBox.Show("这是容器内的按钮");
 
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            form1.ActiveForm.BackColor = Color.Green;
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            form1.ActiveForm.Text = "张麻子来喽";
         }
     }
 }
