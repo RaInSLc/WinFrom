@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace WinFrom
 {
-    public partial class form1 : Form
+    public partial class formLearn : Form
     {
-        public form1()
+        public formLearn()
         {
             InitializeComponent();
         }
@@ -44,13 +44,13 @@ namespace WinFrom
 
         private void button3_Click(object sender, EventArgs e)
         {
-            form1.ActiveForm.BackColor = Color.Green;
+            formLearn.ActiveForm.BackColor = Color.Green;
             MessageBox.Show("换背景成功");
         }
 
         private void button4_Click(object sender, EventArgs e)
         {
-            form1.ActiveForm.Text = "张麻子来喽";
+            formLearn.ActiveForm.Text = "张麻子来喽";
         }
 
         private void pictureBox1_DoubleClick(object sender, EventArgs e)
@@ -60,7 +60,31 @@ namespace WinFrom
 
         private void pictureBox1_MouseHover(object sender, EventArgs e)
         {
-            MessageBox.Show("这是hover事件","第二个参数是弹窗的标题");
+            MessageBox.Show("这是hover事件", "这是hover事件");
+        }
+
+        private void pictureBox1_MouseClick(object sender, MouseEventArgs e)
+        {
+            //Console.WriteLine("这是e.Button.ToString", e.Button.ToString());
+
+            //MessageBox.Show("鼠标点击事件", "鼠标点击事件");
+            
+           
+                MessageBox.Show(e.Button.ToString(), e.Button.ToString());
+            
+            
+        }
+
+        private void groupBox2_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void login_Click(object sender, EventArgs e)
+        {
+            //Form2.ActiveForm.Show(); 无效写法
+            Form f2 = new Form2();
+            f2.Show();
         }
 
         //private void pictureBox1_Click(object sender, EventArgs e)
