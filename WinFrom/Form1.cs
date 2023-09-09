@@ -45,11 +45,27 @@ namespace WinFrom
         private void button3_Click(object sender, EventArgs e)
         {
             form1.ActiveForm.BackColor = Color.Green;
+            MessageBox.Show("换背景成功");
         }
 
         private void button4_Click(object sender, EventArgs e)
         {
             form1.ActiveForm.Text = "张麻子来喽";
         }
+
+        private void pictureBox1_DoubleClick(object sender, EventArgs e)
+        {
+            MessageBox.Show("这是双击事件");
+        }
+
+        private void pictureBox1_MouseHover(object sender, EventArgs e)
+        {
+            MessageBox.Show("这是hover事件","第二个参数是弹窗的标题");
+        }
+
+        //private void pictureBox1_Click(object sender, EventArgs e)
+        //{
+        //    MessageBox.Show("这是单击事件");
+        //}
     }
 }
