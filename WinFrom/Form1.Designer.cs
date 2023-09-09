@@ -119,6 +119,7 @@ namespace WinFrom
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(245, 28);
             this.textBox1.TabIndex = 5;
+            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // label1
             // 
@@ -163,6 +164,7 @@ namespace WinFrom
             this.register.TabIndex = 10;
             this.register.Text = "注册";
             this.register.UseVisualStyleBackColor = true;
+            this.register.Click += new System.EventHandler(this.register_Click);
             // 
             // checkBox1
             // 

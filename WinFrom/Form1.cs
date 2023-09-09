@@ -85,7 +85,26 @@ namespace WinFrom
             //Form2.ActiveForm.Show(); 无效写法
             //Form f2 = new Form2();
             //f2.Show();
-            new Form2().Show();
+            if (textBox1.Text == "123" && textBox2.Text == "123")
+            {
+                MessageBox.Show("登录成功");
+                new Form2().Show();
+            }
+            else
+            {
+                MessageBox.Show("请检查输入的内容");
+            }
+            
+        }
+
+        private void register_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+            
         }
 
         //private void pictureBox1_Click(object sender, EventArgs e)
