@@ -34,7 +34,6 @@ namespace WinFrom
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -43,9 +42,11 @@ namespace WinFrom
             this.register = new System.Windows.Forms.Button();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.signin = new System.Windows.Forms.GroupBox();
+            this.exit = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.signin.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // button1
@@ -100,18 +101,6 @@ namespace WinFrom
             this.button4.Text = "测试修改标题";
             this.button4.UseVisualStyleBackColor = true;
             this.button4.Click += new System.EventHandler(this.button4_Click);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::WinFrom.Properties.Resources.circle;
-            this.pictureBox1.Location = new System.Drawing.Point(1051, 12);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(156, 176);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 4;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.DoubleClick += new System.EventHandler(this.pictureBox1_DoubleClick);
-            this.pictureBox1.MouseClick += new System.Windows.Forms.MouseEventHandler(this.pictureBox1_MouseClick);
             // 
             // textBox1
             // 
@@ -193,11 +182,34 @@ namespace WinFrom
             this.signin.Text = "登录窗口";
             this.signin.Enter += new System.EventHandler(this.groupBox2_Enter);
             // 
+            // exit
+            // 
+            this.exit.Location = new System.Drawing.Point(1091, 516);
+            this.exit.Name = "exit";
+            this.exit.Size = new System.Drawing.Size(116, 84);
+            this.exit.TabIndex = 12;
+            this.exit.Text = "退出";
+            this.exit.UseVisualStyleBackColor = true;
+            this.exit.Click += new System.EventHandler(this.button5_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::WinFrom.Properties.Resources.circle;
+            this.pictureBox1.Location = new System.Drawing.Point(1051, 12);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(156, 176);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 4;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.DoubleClick += new System.EventHandler(this.pictureBox1_DoubleClick);
+            this.pictureBox1.MouseClick += new System.Windows.Forms.MouseEventHandler(this.pictureBox1_MouseClick);
+            // 
             // formLearn
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1219, 612);
+            this.Controls.Add(this.exit);
             this.Controls.Add(this.signin);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.button4);
@@ -205,13 +217,14 @@ namespace WinFrom
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.button1);
             this.Name = "formLearn";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "第一个窗口";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.signin.ResumeLayout(false);
             this.signin.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -232,6 +245,7 @@ namespace WinFrom
         private System.Windows.Forms.Button login;
         private System.Windows.Forms.Button register;
         private System.Windows.Forms.GroupBox signin;
+        private System.Windows.Forms.Button exit;
     }
 }
 

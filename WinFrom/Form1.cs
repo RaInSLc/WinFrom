@@ -87,8 +87,10 @@ namespace WinFrom
             //f2.Show();
             if (textBox1.Text == "123" && textBox2.Text == "123")
             {
-                MessageBox.Show("登录成功");
+                //MessageBox.Show("登录成功");
                 new Form2().Show();
+                // 直接隐藏当前窗口
+                Hide();
             }
             else
             {
@@ -105,6 +107,12 @@ namespace WinFrom
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
             
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            // 完全关闭所有线程的退出
+            System.Environment.Exit(0);
         }
 
         //private void pictureBox1_Click(object sender, EventArgs e)
