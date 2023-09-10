@@ -31,6 +31,7 @@ namespace WinFrom
         {
             this.button1 = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
@@ -40,10 +41,10 @@ namespace WinFrom
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.login = new System.Windows.Forms.Button();
             this.register = new System.Windows.Forms.Button();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.signin = new System.Windows.Forms.GroupBox();
             this.exit = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.button5 = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.signin.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -53,7 +54,7 @@ namespace WinFrom
             // 
             this.button1.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.button1.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            this.button1.Location = new System.Drawing.Point(39, 406);
+            this.button1.Location = new System.Drawing.Point(25, 396);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(170, 59);
             this.button1.TabIndex = 0;
@@ -72,6 +73,16 @@ namespace WinFrom
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "分组容器";
             // 
+            // checkBox1
+            // 
+            this.checkBox1.AutoSize = true;
+            this.checkBox1.Location = new System.Drawing.Point(49, 173);
+            this.checkBox1.Name = "checkBox1";
+            this.checkBox1.Size = new System.Drawing.Size(115, 22);
+            this.checkBox1.TabIndex = 1;
+            this.checkBox1.Text = "checkBox1";
+            this.checkBox1.UseVisualStyleBackColor = true;
+            // 
             // button2
             // 
             this.button2.Location = new System.Drawing.Point(37, 74);
@@ -84,7 +95,7 @@ namespace WinFrom
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(39, 326);
+            this.button3.Location = new System.Drawing.Point(25, 316);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(170, 59);
             this.button3.TabIndex = 2;
@@ -94,7 +105,7 @@ namespace WinFrom
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(39, 248);
+            this.button4.Location = new System.Drawing.Point(25, 238);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(170, 59);
             this.button4.TabIndex = 3;
@@ -155,16 +166,6 @@ namespace WinFrom
             this.register.UseVisualStyleBackColor = true;
             this.register.Click += new System.EventHandler(this.register_Click);
             // 
-            // checkBox1
-            // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(49, 173);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(115, 22);
-            this.checkBox1.TabIndex = 1;
-            this.checkBox1.Text = "checkBox1";
-            this.checkBox1.UseVisualStyleBackColor = true;
-            // 
             // signin
             // 
             this.signin.BackColor = System.Drawing.SystemColors.ButtonHighlight;
@@ -204,11 +205,22 @@ namespace WinFrom
             this.pictureBox1.DoubleClick += new System.EventHandler(this.pictureBox1_DoubleClick);
             this.pictureBox1.MouseClick += new System.Windows.Forms.MouseEventHandler(this.pictureBox1_MouseClick);
             // 
+            // button5
+            // 
+            this.button5.Location = new System.Drawing.Point(25, 475);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(170, 59);
+            this.button5.TabIndex = 13;
+            this.button5.Text = "计算器";
+            this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click_1);
+            // 
             // formLearn
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1219, 612);
+            this.Controls.Add(this.button5);
             this.Controls.Add(this.exit);
             this.Controls.Add(this.signin);
             this.Controls.Add(this.pictureBox1);
@@ -246,6 +258,7 @@ namespace WinFrom
         private System.Windows.Forms.Button register;
         private System.Windows.Forms.GroupBox signin;
         private System.Windows.Forms.Button exit;
+        private System.Windows.Forms.Button button5;
     }
 }
 

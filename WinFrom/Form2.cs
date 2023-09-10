@@ -5,6 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -25,7 +26,13 @@ namespace WinFrom
         private void button1_Click(object sender, EventArgs e)
         {
             this.Close();
-            new formLearn().Show();
+            Thread t1 = new Thread(delegate (){ new formLearn().ShowDialog(); });
+            t1.Start();
+        }
+
+        private void Form2_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

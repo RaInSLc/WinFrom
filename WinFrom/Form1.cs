@@ -5,6 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -85,12 +86,20 @@ namespace WinFrom
             //Form2.ActiveForm.Show(); 无效写法
             //Form f2 = new Form2();
             //f2.Show();
-            if (textBox1.Text == "123" && textBox2.Text == "123")
+            if (textBox1.Text == "123" )
             {
-                //MessageBox.Show("登录成功");
-                new Form2().Show();
+                //MessageBox.Show("登录成功");\
+                // ShowDialog() 当前窗口为焦点窗口 不能点击其他窗口中的内容
+                // new Form2().Show();
                 // 直接隐藏当前窗口
-                Hide();
+                //Hide();
+                //上面的方法创建的新窗口是前后在同一个线程中的 关闭窗口1结束线程会连带窗口2被关闭
+                // 采用委托新线程的方式实现 跳转到第二个窗口
+                //Thread t2 = new Thread(delegate (){ new Form2().ShowDialog(); });
+                //t2.Start();
+                
+                Program.success_flag = "验证成功";
+                Close();
             }
             else
             {
@@ -113,6 +122,12 @@ namespace WinFrom
         {
             // 完全关闭所有线程的退出
             System.Environment.Exit(0);
+        }
+
+        private void button5_Click_1(object sender, EventArgs e)
+        {
+            Thread calc = new Thread(delegate (){ new calc().ShowDialog(); });
+            calc.Start();
         }
 
         //private void pictureBox1_Click(object sender, EventArgs e)
